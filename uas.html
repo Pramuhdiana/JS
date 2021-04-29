@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <form name="calculator">
+        <table class="">
+            <caption>Calculator</caption>
+            <tr>
+                <td>Angka pertama</td>
+                <td>:</td>
+                <td><input type="number" name="angka1"></td>
+            </tr>
+            <tr>
+                <td>Angka kedua</td>
+                <td>:</td>
+                <td><input type="number" name="angka2"></td>
+            </tr>
+            <tr>
+                <td>Hasil</td>
+                <td>:</td>
+                <td><input type="number" name="hasil"></td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <input class="tombol" type="button" onclick="tambah()" value="  +  ">
+                    <input class="tombol" type="button" onclick="kurang()" value="  -  ">
+                    <input class="tombol" type="button" onclick="kali()" value="  *  ">
+                    <input class="tombol" type="button" onclick="bagi()" value="  /  ">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+<script type="text/javascript">
+    function tambah() {
+        var angka1 = parseFloat(document.calculator.angka1.value);
+        var angka2 = parseFloat(document.calculator.angka2.value);
+        var hasil = angka1 + angka2;
+        document.calculator.hasil.value = hasil;
+    }
+    function kurang() {
+        var angka1 = parseFloat(document.calculator.angka1.value);
+        var angka2 = parseFloat(document.calculator.angka2.value);
+        var hasil = angka1 - angka2;
+        document.calculator.hasil.value = hasil;
+    }
+    function kali() {
+        var angka1 = parseFloat(document.calculator.angka1.value);
+        var angka2 = parseFloat(document.calculator.angka2.value);
+        var hasil = angka1 * angka2;
+        document.calculator.hasil.value = hasil;
+    }
+    function bagi() {
+        var angka1 = parseFloat(document.calculator.angka1.value);
+        var angka2 = parseFloat(document.calculator.angka2.value);
+        var hasil = angka1 / angka2;
+        document.calculator.hasil.value = hasil;
+    }
+</script>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>fungsi alert,prompt,confirm</title>
+</head>
+<body>
+    <button onClick="alert('Hallo ini pesan alert')">Klik Saya</button>
+    <button onclick="konfirmasi()">Klik Untuk memunculkan pesan</button>
+    <p id="pesan"></p>
+</body>
+    <script>
+        var nama = prompt("Masukan nama anda ?", "");
+        document.write("<p>Hello "+ nama +"</p>");
+
+        //fungsi confirm
+        function konfirmasi(){
+         var tanya = confirm("Apakah Anda Akan Memunculkan Pesan ?");
+ 
+         if(tanya === true) {
+            pesan = "Hallo ini pesan yang akan keluar jika anda menekan ok";
+         }else{
+            pesan = "Tidak";
+         }
+ 
+         document.getElementById("pesan").innerHTML = pesan;
+      }
+    </script>
+</html> -->
